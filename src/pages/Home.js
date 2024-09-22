@@ -86,7 +86,11 @@ const sortedData = [...filteredData].sort((a, b) => {
         {
           records: [
             {
-              fields: newRecord,
+              fields: {
+                ...newRecord,
+                Price: Number(newRecord.Price), // Ensure Price is sent as a number
+              },
+              
             },
           ],
         },
@@ -112,7 +116,10 @@ const sortedData = [...filteredData].sort((a, b) => {
       const response = await axios.patch(
         `${API_URL}/${selectedRecord.id}`, // PATCH request with the correct URL structure
         {
-          fields: newRecord, // Send only the updated fields in the body
+          fields: {
+            ...newRecord,
+            Price: Number(newRecord.Price), // Ensure Price is sent as a number
+          },
         },
         {
           headers: {
@@ -137,13 +144,19 @@ const sortedData = [...filteredData].sort((a, b) => {
     if (selectedRecords.length === 0) {
       setErrorMessage('Please select at least one record'); // Set the error message
       return;
-    } 
-    else{
-     setErrorMessage(''); // Clear the error message
-    }   
-
+    }
+  
+    // Show a confirmation dialog
+    const confirmed = window.confirm('Are you sure you want to delete the selected records?');
+    
+    if (!confirmed) {
+      return; // Do nothing if the user cancels the action
+    }
+  
+    setErrorMessage(''); // Clear the error message
+  
     const recordIds = selectedRecords.map((id) => `records[]=${id}`).join('&');
-
+  
     try {
       await axios.delete(`${API_URL}?${recordIds}`, {
         headers: {
@@ -156,6 +169,7 @@ const sortedData = [...filteredData].sort((a, b) => {
       console.error("Error deleting records", error);
     }
   };
+  
 
   const handleSort = (field) => {
     const order = sortField === field && sortOrder === 'asc' ? 'desc' : 'asc';
