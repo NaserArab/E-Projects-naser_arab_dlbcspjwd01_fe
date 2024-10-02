@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 
+// This component renders a sortable and filterable table to display a list of car records, with options to view and select individual entries.
 function TableList(props) {
      const {
           sortField,

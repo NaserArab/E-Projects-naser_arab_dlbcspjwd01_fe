@@ -1,6 +1,7 @@
 import React from "react";
 import ReactModal from "react-modal";
 
+// This component displays a modal dialog for creating or editing car records, including form inputs and validation messages for car details.
 function Dialog(props) {
      const {
           modalIsOpen,

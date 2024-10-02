@@ -1,109 +1,120 @@
 /* General layout and typography */
+
+/* Sets the default font family, background color, margin, and text color for the body */
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f9;
-  margin: 0;
-  padding: 0;
-  color: #333;
+  font-family: 'Roboto', sans-serif; 
+  background-color: #f4f4f9; 
+  margin: 0; 
+  padding: 0; 
+  color: #333; /* Dark grey text color */
 }
 
+/* Container for the main content of the page */
 .home-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 40px auto;
-  text-align: center;
+  width: 90%; 
+  max-width: 1200px; 
+  margin: 40px auto; 
+  text-align: center; 
 }
 
-/* Headings */
+/* Styles the main heading (h2) */
 h2 {
-  font-size: 2rem;
-  color: #2c3e50;
-  margin-bottom: 20px;
+  font-size: 2rem; 
+  color: #2c3e50; /* Dark blue-grey color */
+  margin-bottom: 20px; 
 }
 
-/* Table */
+/* Styles for the main table displaying data */
 .data-table {
-  width: 100%;
-  border-collapse: separate;
+  width: 100%; 
+  border-collapse: separate; 
   border-spacing: 0;
-  margin-top: 30px;
+  margin-top: 30px; 
 }
 
+/* Table headers and cells */
 .data-table th,
 .data-table td {
-  padding: 15px 20px;
+  padding: 15px 20px; 
   text-align: left;
 }
 
+/* Styles the table header */
 .data-table thead {
-  background-color: #3498db;
-  color: white;
-  border-radius: 8px;
+  background-color: #3498db; /* Blue background for the header */
+  color: white; 
+  border-radius: 8px; 
 }
 
+/* Alternate row background color for readability */
 .data-table tr:nth-child(even) {
-  background-color: #ecf0f1;
+  background-color: #ecf0f1; /* Light grey for even rows */
 }
 
+/* Background change on hover for table rows */
 .data-table tr:hover {
-  background-color: #bdc3c7;
-  cursor: pointer;
+  background-color: #bdc3c7; /* Light grey on hover */
+  cursor: pointer; 
 }
 
 .data-table td.icon-cell {
-  text-align: center;
+  text-align: center; 
 }
 
 .data-table th {
-  font-size: 1.1rem;
+  font-size: 1.1rem; 
 }
 
 .data-table td {
-  font-size: 1rem;
-  border-bottom: 1px solid #ddd;
+  font-size: 1rem; 
+  border-bottom: 1px solid #ddd; 
 }
 
-/* Buttons */
+/* General button styles */
 button {
-  padding: 12px 20px;
-  font-size: 1rem;
-  background-color: #3498db;
-  color: white;
-  border: none;
+  padding: 12px 20px; 
+  font-size: 1rem; 
+  background-color: #3498db; 
+  color: white; 
+  border: none; 
   border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; 
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
+/* Hover effect for buttons */
 button:hover {
-  background-color: #2980b9;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+  background-color: #2980b9; 
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25); 
 }
 
+/* Actions container for buttons */
 .actions-box {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  display: flex; 
+  justify-content: center; 
+  gap: 20px; 
   margin-bottom: 30px;
 }
 
+/* Modal styles */
 .Modal {
-  position: fixed;
-  top: 50%;
+  position: fixed; /* Fixed position in the viewport */
+  top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.95); /* Light transparency */
-  padding: 30px 40px;
-  border-radius: 12px;
-  width: 400px;
-  max-width: 90%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 40px; 
+  border-radius: 12px; 
+  width: 400px; 
+  max-width: 90%; 
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  opacity: 1; /* Ensure modal is visible */
-  animation: modalFadeIn 0.4s forwards;
+  opacity: 1; /* Makes sure modal is visible */
+  animation: modalFadeIn 0.4s forwards; /* Smooth fade-in animation */
 }
 
+/* Modal fade-in animation */
 @keyframes modalFadeIn {
   from {
     opacity: 0;
@@ -111,16 +122,15 @@ button:hover {
   }
   to {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
   }
 }
 
-/* Remove the grey background */
 .Overlay {
-  background-color: transparent;
+  background-color: transparent; 
 }
 
-
+/* Input fields */
 input {
   width: 100%;
   padding: 15px;
@@ -128,52 +138,57 @@ input {
   border: 2px solid #ddd;
   border-radius: 6px;
   font-size: 1rem;
-  background-color: #fafafa;
+  background-color: #fafafa; 
   transition: border-color 0.3s ease;
 }
 
+/* Focused input field styles */
 input:focus {
   border-color: #3498db;
-  outline: none;
+  outline: none; 
 }
 
+/* Error state for input fields */
 input.input-error {
-  border-color: #e74c3c;
+  border-color: #e74c3c; 
   background-color: #fce4e4;
 }
 
+/* Error message styling for input fields */
 .input-field-error-message {
-  color: #e74c3c;
-  font-size: 0.85rem;
+  color: #e74c3c; 
+  font-size: 0.85rem; 
 }
 
+/* Close button for the modal */
 button.close-btn {
-  background-color: transparent;
-  color: #888;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border: none;
+  background-color: transparent; 
+  color: #888; 
+  position: absolute; 
+  top: 15px; 
+  right: 20px; 
+  font-size: 1.2rem; 
+  cursor: pointer; 
+  border: none; 
 }
 
 /* Ripple Effect on Button Clicks */
 button:active::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  content: ""; 
+  display: block; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
   width: 10px;
-  height: 10px;
+  height: 10px; 
   background: white;
-  opacity: 0.6;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  animation: ripple 0.6s linear;
+  opacity: 0.6; 
+  transform: translate(-50%, -50%); 
+  border-radius: 50%; 
+  animation: ripple 0.6s linear; 
 }
 
+/* Ripple animation */
 @keyframes ripple {
   from {
     width: 10px;
@@ -187,20 +202,22 @@ button:active::after {
   }
 }
 
+/* Display the total number of records */
 .record-count {
-  text-align: right; /* Align to the right */
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 10px; /* Space between the record count and the table */
+  text-align: right;
+  font-size: 1rem; 
+  color: #333; 
+  margin-bottom: 10px; 
   font-weight: bold;
 }
 
+/* Search bar styling */
 .search-bar {
-  padding: 10px;
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+  padding: 10px; 
+  width: 100%; 
+  max-width: 300px; 
+  margin-bottom: 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-size: 1rem; 
 }
