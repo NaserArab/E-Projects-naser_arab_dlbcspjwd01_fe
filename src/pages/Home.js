@@ -36,8 +36,11 @@ function Home() {
     (record) =>
       record.fields.Name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       record.fields.Brand.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      record.fields.Color.toLowerCase().includes(searchTerm.toLowerCase())
+      record.fields.Color.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      record.fields.Model.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      record.fields.Year.toString().includes(searchTerm) // Convert Year to string to match search term
   );
+  
 
   // Sort the filtered data based on the current sortField and sortOrder
   const sortedData = [...filteredData].sort((a, b) => {
