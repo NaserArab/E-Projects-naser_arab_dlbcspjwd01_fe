@@ -2,7 +2,7 @@ Car gallery system made with React.js
 
 This project was bootstrapped with [Create React App] (https://github.com/facebook/create-react-app).
 
-Please pull the repository, then run `npm run install` on the main branch of the repository. 
+Please pull the repository, then run `npm install` on the main branch of the repository. 
 
 This will install the needed packages. 
 
