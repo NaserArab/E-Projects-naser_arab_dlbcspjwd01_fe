@@ -1,0 +1,27 @@
+/* Modal Input Field Adjustments */
+input {
+    width: 100%;
+   
+  }
+
+  @media (max-width: 480px) {
+    .Modal {
+      
+      padding: 20px;
+      width: 65%;
+        padding: 21px;
+        margin: 14px
+     
+    }
+    input{
+      width: 50%;
+    }
+
+    .inputInfo{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+       
+     }
+   
+  }

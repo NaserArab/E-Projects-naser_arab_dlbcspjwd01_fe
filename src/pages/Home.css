@@ -15,6 +15,9 @@ body {
   max-width: 1200px; 
   margin: 40px auto; 
   text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Styles the main heading (h2) */
@@ -204,11 +207,19 @@ button:active::after {
 
 /* Display the total number of records */
 .record-count {
-  text-align: right;
-  font-size: 1rem; 
-  color: #333; 
-  margin-bottom: 10px; 
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  margin: 10px auto;
   font-weight: bold;
+  width: 100%; /* Ensures it takes the full width */
+}
+
+@media (min-width: 768px) {
+  .record-count {
+    text-align: right; /* Align to the right on larger screens if preferred */
+    width: auto;
+  }
 }
 
 /* Search bar styling */
@@ -220,4 +231,82 @@ button:active::after {
   border: 1px solid #ccc; 
   border-radius: 4px; 
   font-size: 1rem; 
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 768px) {
+  /* Container */
+  .home-container {
+    width: 95%;
+    padding: 10px;
+    margin: 20px auto;
+    display: flex;
+        flex-direction: column;
+        align-items: center
+  }
+
+  /* Headings */
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Data Table */
+  .data-table th, .data-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .actions-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Smaller Screens (Mobile) */
+@media (max-width: 480px) {
+  /* Table Adjustments */
+  .data-table {
+    display: block;
+    overflow-x: auto; /* Allow horizontal scrolling */
+  }
+
+  .data-table th, .data-table td {
+    font-size: 0.8rem;
+  }
+
+  /* Buttons */
+  button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  /* Modal */
+  .Modal {
+    width: 60%;
+    padding: 20px;
+
+    
+  }
+
+
+
+  /* Search bar and record count */
+  .search-bar, .record-count {
+    width: 85%;
+    font-size: 0.9rem;
+  }
+
+ 
+
+
+  @media (max-width: 468px) {
+
+    .Modal {
+      width: 60%;
+      padding: 20px;
+  
+ 
+}
+    }
+ 
 }
