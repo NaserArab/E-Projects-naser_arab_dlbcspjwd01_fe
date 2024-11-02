@@ -1,5 +1,6 @@
 import React from "react";
 import ReactModal from "react-modal";
+import './Dialog.css';
 
 // This component displays a modal dialog for creating or editing car records, including form inputs and validation messages for car details.
 function Dialog(props) {
@@ -30,8 +31,9 @@ function Dialog(props) {
                          : "Create New Car"}
                </h2>
 
-               <label>
-                    Name:
+               <div className="inputInfo">
+             
+                    <span >Name: </span>
                     <input
                          type="text"
                          value={newRecord.Name}
@@ -48,10 +50,12 @@ function Dialog(props) {
                               {validationErrors.Name}
                          </span>
                     )}
-               </label>
+               </div>
 
-               <label>
-                    Color:
+               <div  className="inputInfo">
+               <span >Color: </span>
+
+                    
                     <input
                          type="text"
                          value={newRecord.Color}
@@ -68,10 +72,11 @@ function Dialog(props) {
                               {validationErrors.Color}
                          </span>
                     )}
-               </label>
+               </div>
 
-               <label>
-                    Brand:
+               <div  className="inputInfo">
+               <span >Brand: </span>
+
                     <input
                          type="text"
                          value={newRecord.Brand}
@@ -88,10 +93,11 @@ function Dialog(props) {
                               {validationErrors.Brand}
                          </span>
                     )}
-               </label>
+               </div>
 
-               <label>
-                    Model:
+               <div  className="inputInfo">
+               <span >Model: </span>
+
                     <input
                          type="text"
                          value={newRecord.Model}
@@ -108,10 +114,11 @@ function Dialog(props) {
                               {validationErrors.Model}
                          </span>
                     )}
-               </label>
+               </div>
 
-               <label>
-                    Year:
+               <div  className="inputInfo">
+               <span >Year: </span>
+
                     <input
                          type="text"
                          value={newRecord.Year}
@@ -128,10 +135,12 @@ function Dialog(props) {
                               {validationErrors.Year}
                          </span>
                     )}
-               </label>
+               </div>
 
-               <label>
-                    Price:
+               <div  className="inputInfo">
+               <span >Price: </span>
+
+          
                     <div
                          style={{
                               display: "flex",
@@ -159,7 +168,7 @@ function Dialog(props) {
                               {validationErrors.Price}
                          </span>
                     )}
-               </label>
+               </div>
 
                {selectedRecord && selectedRecord.id ? (
                     <button onClick={handleUpdateRecord}>Save</button> // Show Save button for editing
